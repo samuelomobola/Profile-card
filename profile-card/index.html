@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card - Stage 0</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <article data-testid="test-profile-card" class="profile-card">
+      <!-- figure -->
+      <figure class="profile-avatar">
+        <img
+          id="avatar"
+          src="Task.jpeg"
+          alt="user-avatar"
+          data-testid="test-user-avatar"
+        />
+        <figcaption>Upload or enter URL below</figcaption>
+      </figure>
+
+      <div class="input-container">
+        <input type="file" id="upload" accept="image/*" />
+        <input
+          type="url"
+          id="avatar-url"
+          placeholder="You can paste your Image URL here......."
+        />
+      </div>
+
+      <!-- header -->
+      <header data-testid="test-header">
+        <h1 data-testid="test-user-name">Temitope Ayobami</h1>
+        <p data-testid="test-user-bio">
+          I'm a pasionate Music lover, poet, and Front-end developer —
+          passionate about creativity and connection.
+        </p>
+      </header>
+
+      <!-- time -->
+      <p id="user-time" data-testid="test">
+        Current time:
+        <span data-testid="test-user-time">
+          <!-- JS will insert Date.now() here -->
+        </span>
+      </p>
+
+      <!-- social-links -->
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="https://x.com/brothajones_777?t=K9ncTj4wQjA2S-SNQFz_IA&s=09"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-twitter"
+              ><i class="ri-twitter-fill"></i> Twitter</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/samuelomobola"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-github"
+            >
+              <i class="ri-github-fill"></i> GitHub
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Hobbies Section -->
+      <section class="list-section">
+        <h3>Hobbies</h3>
+        <ul data-testid="test-user-hobbies">
+          <li>Listening to Music</li>
+          <li>Poetry</li>
+          <li>Playing Music Instruments</li>
+          <li>Dancing</li>
+          <li>Gisting</li>
+          <li>Making New Friends</li>
+        </ul>
+      </section>
+
+      <!-- Dislikes Section -->
+      <section class="list-section">
+        <h3>Dislikes</h3>
+        <ul data-testid="test-user-dislikes">
+          <li>Sports</li>
+          <li>Wasting time</li>
+          <li>Politics</li>
+          <li>Negative energy</li>
+        </ul>
+      </section>
+    </article>
+
+    <script src="script.js"></script>
+  </body>
+</html>
