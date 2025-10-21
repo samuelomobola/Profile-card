@@ -4,10 +4,109 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <head>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </head>
   </head>
-  <body>
+  <body class="contact">
     <article>
-      <main></main>
+      <main>
+        <div class="contact-container">
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            id="form"
+            class="contact-left"
+          >
+            <div class="contact-left-title">
+              <h2>Get in touch</h2>
+              <hr />
+            </div>
+            <input
+              type="hidden"
+              name="access_key"
+              value="793ce7e9-242c-49ed-a63e-2ebd2bdbe280"
+            />
+
+            <!-- error message -->
+            <span id="error" class="error"></span>
+            <!-- input fields -->
+            <!-- Full-name -->
+            <label for="name" data-testid="test-contact-name">Full Name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              class="contact-inputs"
+              id="inputname"
+              required
+            />
+
+            <!-- ........email -->
+            <label for="email" data-testid="test-contact-email">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              class="contact-inputs"
+              id="email"
+              required
+            />
+            <p class="emailerror" data-testid="test-contact-error-email"></p>
+
+            <!-- subject -->
+            <label for="subject" data-testid="test-contact-subject"
+              >Subject</label
+            >
+            <input
+              type="text"
+              name="subject"
+              placeholder="Your Subject....."
+              class="contact-inputs"
+              id="subject"
+              required
+            />
+
+            <!-- message -->
+            <label for="message" data-testid="test-contact-message"
+              >Message</label
+            >
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              id=""
+              id="message"
+              required
+            ></textarea>
+
+            <!-- submit-button -->
+            <button type="submit" data-testid="test-contact-submit">
+              Submit <i class="ri-arrow-right-line"></i>
+            </button>
+
+            <!-- success message -->
+            <p
+              id="successMessage"
+              class="hidden success-text"
+              data-testid="test-contact-success"
+            ></p>
+          </form>
+          <div class="contact-right"></div>
+        </div>
+      </main>
     </article>
+
+    <!-- js -->
+    <script src="script.js"></script>
   </body>
 </html>

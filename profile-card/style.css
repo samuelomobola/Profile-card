@@ -1,4 +1,6 @@
-body {
+/* profile card css */
+
+.profile .body {
   font-family: 'Sarala', sans-serif;
   background: #e9eef6;
   display: flex;
@@ -127,3 +129,116 @@ nav a:hover {
 }
 
 /* --- Responsive --- */
+
+/* contactus css */
+
+.contact {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+body.contact {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(#ffdad5, #fff7f9);
+}
+
+/* Layout container */
+.contact .contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 40px 20px;
+  flex-wrap: wrap; /* ensures responsiveness */
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.contact-left-title h2 {
+  font-weight: 600;
+  color: #a363aa;
+  font-size: 40px;
+  margin-bottom: 5px;
+  font-family: 'Outfit';
+}
+
+.contact-left-title hr {
+  border: none;
+  width: 120px;
+  height: 5px;
+  background-color: #a363aa;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+.contact-inputs {
+  width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 50px;
+}
+
+.contact-left textarea {
+  height: 120px;
+  padding: 15px 20px;
+  width: 90%;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  resize: none;
+}
+
+.contact-inputs:focus,
+.contact-left textarea:focus {
+  border: 2px solid #ff994f;
+}
+
+.contact-inputs,
+.contact-left textarea {
+  transition: border 0.3s ease;
+}
+
+.contact-inputs::placeholder {
+  color: #a9a9a9;
+}
+
+.contact-left button {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #fff;
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(270deg, #ff994f, #fa6d86);
+  cursor: pointer;
+}
+
+.contact-left button:hover {
+  transform: translateY(2px);
+  background-color: #fa6d86;
+}
+
+.contact-left button i {
+  height: 15px;
+}
+
+@media (max-width: 800px) {
+  .contact-inputs {
+    width: 80vw;
+  }
+
+  .contact-right {
+    display: none;
+  }
+}
