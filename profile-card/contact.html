@@ -9,14 +9,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <head>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-      />
-    </head>
   </head>
   <body class="contact">
     <article>
@@ -38,8 +30,6 @@
               value="793ce7e9-242c-49ed-a63e-2ebd2bdbe280"
             />
 
-            <!-- error message -->
-            <span id="error" class="error"></span>
             <!-- input fields -->
             <!-- Full-name -->
             <label for="name" data-testid="test-contact-name">Full Name</label>
@@ -50,7 +40,9 @@
               class="contact-inputs"
               id="inputname"
               required
+              aria-describedby="nameError"
             />
+            <p id="nameError" class="error error-text" aria-live="polite"></p>
 
             <!-- ........email -->
             <label for="email" data-testid="test-contact-email">Email</label>
@@ -61,8 +53,14 @@
               class="contact-inputs"
               id="email"
               required
+              aria-describedby="emailError"
             />
-            <p class="emailerror" data-testid="test-contact-error-email"></p>
+
+            <p
+              id="emailError"
+              class="error error-text"
+              data-testid="test-contact-error-email"
+            ></p>
 
             <!-- subject -->
             <label for="subject" data-testid="test-contact-subject"
@@ -75,7 +73,9 @@
               class="contact-inputs"
               id="subject"
               required
+              aria-describedby="subjectError"
             />
+            <p id="subjectError" class="error" aria-live="polite"></p>
 
             <!-- message -->
             <label for="message" data-testid="test-contact-message"
@@ -84,10 +84,15 @@
             <textarea
               name="message"
               placeholder="Your Message"
-              id=""
               id="message"
               required
+              aria-describedby="messageError"
             ></textarea>
+            <p
+              id="messageError"
+              class="error error-text"
+              aria-live="polite"
+            ></p>
 
             <!-- submit-button -->
             <button type="submit" data-testid="test-contact-submit">
